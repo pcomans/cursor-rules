@@ -6,6 +6,30 @@ This is a personal collection of Cursor rules inspired by Geoffrey Huntley's blo
 
 This repository contains a growing collection of Cursor rules that help automate and standardize development workflows. The rules are designed to be composed together like Unix pipes, creating a powerful set of automated tools and processes.
 
+## Usage
+
+To use these rules in your project:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/pcomans/cursor-rules.git
+   ```
+
+2. Switch to the repository you want to use these rules in
+
+3. Create a symlink to the rules in your project:
+   ```bash
+   # From your project root
+   ln -s /path/to/cursor-rules/.cursor .cursor
+   ```
+
+4. Verify the symlink:
+   ```bash
+   ls -la .cursor/rules/
+   ```
+
+Now Cursor will use these rules when working with files in your project.
+
 ## Goal Structure Analysis
 
 The goals in the original blog post are structured in several key ways:
