@@ -1,0 +1,82 @@
+---
+description: Task Planning and Progress Tracking with Scratchpad
+globs:
+alwaysApply: true 
+---
+
+## Description
+
+This rule ensures effective task planning and progress tracking using the `.scratch` file as a scratchpad. The scratchpad serves as a central place for task organization, planning, and reflection.
+
+## Rule
+
+When managing tasks:
+
+1. All new tasks MUST start with a review and update of the `.scratch` file
+2. The `.scratch` file MUST be cleared of old task content before starting a new task
+3. Each task MUST include:
+   - Task description and requirements
+   - Step-by-step plan with todo markers
+   - Progress updates as steps are completed
+   - Reflection points at key milestones
+4. Todo markers MUST use the format `[ ]` for incomplete and `[X]` for complete items
+5. The scratchpad MUST be referenced before starting any new subtask
+
+## Format
+
+```markdown
+# Current Task: [Task Name]
+
+## Description
+[Detailed task description and requirements]
+
+## Plan
+[ ] Step 1: Initial setup
+[ ] Step 2: Core implementation
+[ ] Step 3: Testing
+
+## Progress
+[X] Step 1 completed: Initial setup done
+[ ] Step 2 in progress: Core implementation
+
+## Reflections
+### Milestone 1
+- Accomplished: [List of achievements]
+- Challenges: [List of issues encountered]
+- Improvements: [List of potential improvements]
+- Next Steps: [List of next actions]
+```
+
+## Examples
+
+✅ Correct:
+```markdown
+# Current Task: Implement User Authentication
+
+## Description
+Add user authentication system with JWT tokens and role-based access control.
+
+## Plan
+[ ] Set up authentication dependencies
+[ ] Create user model and database schema
+[ ] Implement JWT token generation and validation
+
+## Progress
+[X] Set up authentication dependencies
+[X] Create user model and database schema
+
+## Reflections
+### Milestone: Basic Setup
+- Accomplished: Dependencies installed, user model created
+- Challenges: Database migration issues
+- Improvements: Better error handling needed
+- Next Steps: Implement JWT logic
+```
+
+❌ Incorrect:
+```markdown
+# TODO List
+- Do something
+- Do another thing
+- Done with this
+``` 
