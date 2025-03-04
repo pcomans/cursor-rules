@@ -60,6 +60,8 @@ The goals in the original blog post are structured in several key ways:
 
 The `cursor-rules-location` rule in this collection is based on the implementation from [groundhog](https://github.com/ghuntley/groundhog/blob/trunk/.cursor/rules/cursor-rules-location.mdc) by Geoffrey Huntley. This rule establishes the standard structure and location for Cursor rules within a project.
 
+The `scratch-task-planning` rule is based on the task planning methodology from [devin.cursorrules](https://github.com/grapeot/devin.cursorrules/blob/master/.cursorrules) by grapeot, which provides a structured approach to task organization and progress tracking.
+
 ## Contributing
 
 Feel free to contribute to this collection by:
