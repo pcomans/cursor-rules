@@ -1,6 +1,6 @@
 # Cursor Rules Collection
 
-This is a personal collection of Cursor rules inspired by Geoffrey Huntley's project [groundhog](https://github.com/ghuntley/groundhog/) project and his blog post on building a "stdlib" for Cursor AI. You can find the original article at [ghuntley.com/stdlib/](https://ghuntley.com/stdlib/).
+This is a personal collection of Cursor rules inspired by Geoffrey Huntley's blog post on building a "stdlib" for Cursor AI. You can find the original article at [ghuntley.com/stdlib/](https://ghuntley.com/stdlib/).
 
 ## About This Collection
 
@@ -31,6 +31,10 @@ The goals in the original blog post are structured in several key ways:
    - Rules are updated based on learnings
    - Failed attempts are documented and corrected
    - Rules evolve to handle edge cases
+
+## Attribution
+
+The `cursor-rules-location` rule in this collection is based on the implementation from [groundhog](https://github.com/ghuntley/groundhog/blob/trunk/.cursor/rules/cursor-rules-location.mdc) by Geoffrey Huntley. This rule establishes the standard structure and location for Cursor rules within a project.
 
 ## Getting Started
 
