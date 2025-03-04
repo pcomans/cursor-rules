@@ -1,6 +1,6 @@
 ---
 description: Python Poetry Dependency Management
-globs: pyproject.toml,poetry.lock
+globs: pyproject.toml poetry.lock *.py
 alwaysApply: false
 ---
 
