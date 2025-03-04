@@ -60,15 +60,6 @@ The goals in the original blog post are structured in several key ways:
 
 The `cursor-rules-location` rule in this collection is based on the implementation from [groundhog](https://github.com/ghuntley/groundhog/blob/trunk/.cursor/rules/cursor-rules-location.mdc) by Geoffrey Huntley. This rule establishes the standard structure and location for Cursor rules within a project.
 
-## Getting Started
-
-To use these rules:
-
-1. Create a `.cursor/rules` directory in your project
-2. Copy the desired rule files into this directory
-3. Configure the rules according to your project's needs
-4. Let Cursor AI use these rules to automate your development workflow
-
 ## Contributing
 
 Feel free to contribute to this collection by:
