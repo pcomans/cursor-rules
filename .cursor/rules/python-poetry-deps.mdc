@@ -1,0 +1,91 @@
+---
+description: Python Poetry Dependency Management
+globs: pyproject.toml,poetry.lock
+alwaysApply: false
+---
+
+## Description
+
+This rule ensures proper Python dependency management using Poetry. Cursor MUST use Poetry commands to modify dependencies, never editing `pyproject.toml` or `poetry.lock` directly. All Python files MUST be executed using `poetry run python`.
+
+## Rule
+
+When managing Python dependencies:
+
+1. All Python projects MUST use Poetry for dependency management
+2. Dependencies MUST be specified in `pyproject.toml`
+3. Lock file (`poetry.lock`) MUST be committed to version control
+4. Development dependencies MUST be separated from runtime dependencies
+5. Version constraints MUST be explicit and follow semantic versioning
+6. Cursor MUST use Poetry commands to modify dependencies, NEVER edit `pyproject.toml` or `poetry.lock` directly
+7. All Python files MUST be executed using `poetry run python`, NEVER use `python` directly
+
+## Implementation
+
+The rule enforces the following practices:
+
+1. **Project Structure**
+   ```
+   project/
+   ├── pyproject.toml
+   ├── poetry.lock
+   └── src/
+       └── project/
+           └── __init__.py
+   ```
+
+2. **Version Constraints**
+   ```toml
+   [tool.poetry.dependencies]
+   python = "^3.8"
+   requests = "^2.28.0"
+   pandas = "~1.5.0"
+
+   [tool.poetry.group.dev.dependencies]
+   pytest = "^7.0.0"
+   black = "^22.0.0"
+   ```
+
+## Essential Commands
+
+```bash
+# Project Management
+poetry new my-project          # Create new project
+poetry init                    # Initialize in existing project
+poetry install                 # Install dependencies
+poetry update                  # Update dependencies
+poetry lock                    # Update lock file
+poetry sync                    # Sync environment with lock file
+
+# Dependency Management
+poetry add requests           # Add runtime dependency
+poetry add --dev pytest       # Add development dependency
+poetry add requests@^2.28.0   # Add specific version
+poetry remove requests        # Remove dependency
+poetry show                   # Show dependency information
+
+# Running Python
+poetry run python script.py   # Run Python script
+poetry run python -m pytest   # Run module (e.g., tests)
+poetry shell                  # Activate virtual environment
+```
+
+## Examples
+
+✅ Correct:
+```bash
+# Add and update dependencies
+poetry add requests
+poetry add --dev pytest
+poetry update
+
+# Run Python
+poetry run python script.py
+```
+
+❌ Incorrect:
+```bash
+# ❌ DON'T DO THIS
+echo 'requests = "^2.28.0"' >> pyproject.toml  # Direct file edit
+python script.py                               # Direct Python execution
+```
